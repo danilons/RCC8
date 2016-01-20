@@ -1,7 +1,9 @@
-import pytest
 import builtins as __builtin__
+
+import pytest
 from mock import mock_open, patch
-from RCC8.dataset import pascal_voc
+
+from RCC8NN.rcc8nn.dataset import imdb
 
 
 @pytest.fixture
@@ -15,7 +17,7 @@ def annot():
 
 @pytest.fixture
 def dset():
-    return pascal_voc.Dataset(path='')
+    return imdb.Dataset(path='')
 
 
 def test_annotation_load(annot, dset):
